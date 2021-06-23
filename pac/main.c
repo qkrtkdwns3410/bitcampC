@@ -2,9 +2,14 @@
 
 
 int main() {
-    char str[15];
-    gets(str);
-    printf(str);
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *p = &arr[0];
+    int i;
+
+    for (i = 0; i < 5; i++, p++) {
+        printf("%d\n", *p);
+    }
 }
+
 
 
