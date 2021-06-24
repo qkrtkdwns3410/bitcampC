@@ -1,14 +1,13 @@
 #include <stdio.h>
-
+#include <string.h>
 
 int main() {
-    int arr[5] = {10, 20, 30, 40, 50};
-    int *p = &arr[0];
-    int i;
-
-    for (i = 0; i < 5; i++, p++) {
-        printf("%d\n", *p);
+    char *str = "good morning";
+    int i, count = 0;
+    for (i = strlen(*str)-1; i >= 0; i--) {
+        printf("%c", *(str + i));
     }
+
 }
 
 
