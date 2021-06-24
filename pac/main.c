@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char *str = "good morning";
-    int i, count = 0;
-    for (i = strlen(*str)-1; i >= 0; i--) {
-        printf("%c", *(str + i));
-    }
 
+int main() {
+    struct sungjuk {
+        char *name;
+        int kor, eng;
+        double avg;
+    };
+    struct sungjuk m2_1;
+    m2_1.name = "박상준";
+    m2_1.kor = 95;
+    m2_1.eng = 87;
 }
 
 
