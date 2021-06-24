@@ -2,19 +2,18 @@
 #include <string.h>
 
 
-typedef struct tax {
-    int value;
-    int price;
-    double rate;
-} TAX; //한번에 정의와 재정의까지....
+char* Reverse(const char *str) {
+    static char result[80]; //result 배열을 정적 지역 변수로 선언함
+    int i;
+    int len = strlen(str);
+    for (i = 0; i < len; i++) {
+        result[i] = str[len - i - 1];
+    }
+    result[i] = '\0';
 
-void sub(TAX *a) { //배열의 주소자체를 참조합니다.
-    printf("%f", a->value * a->price * a->rate);
+    return result;
 }
 
-int main() {
-    TAX elec = {300, 2700, 5.7};
-    sub(&elec);
-    return 0;
+int main(){
+    return Reverse();
 }
-
