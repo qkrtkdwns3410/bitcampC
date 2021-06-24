@@ -1,41 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 
-enum weekday{sun,mon,tue,wed,thu,fri, sat};
 
-int main() {
-    enum weekday w_day;
-    printf("input 0 ~ 6: ");
-    scanf("%d", &w_day);
-    printf("\n");
+typedef struct tax {
+    int value;
+    int price;
+    double rate;
+} TAX; //한번에 정의와 재정의까지....
 
-    switch (w_day) {
-        case sun:
-            printf("Sunday");
-            break;
-        case mon:
-            printf("Monday");
-            break;
-        case tue:
-            printf("Thueday");
-            break;
-        case wed:
-            printf("Wednesday");
-            break;
-        case thu:
-            printf("Thursday");
-            break;
-        case fri:
-            printf("F");
-            break;
-        case sat:
-            printf("sat");
-            break;
-        default:
-            printf("Input Correct Number");
-    }
-    return 0;
+void sub(TAX *a) { //배열의 주소자체를 참조합니다.
+    printf("%f", a->value * a->price * a->rate);
 }
 
-
+int main() {
+    TAX elec = {300, 2700, 5.7};
+    sub(&elec);
+    return 0;
+}
 
